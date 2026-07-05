@@ -1,0 +1,71 @@
+/* *{
+    margin-left: 20px;
+    margin-right: 20px;
+} */
+:root{
+    --primary: #0d6efd;
+}
+
+.texte-primary{
+    color: var(--primary);
+}
+
+.logo{
+    margin-top: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.summit{
+    margin-left: 20px;
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    gap: 50px;
+    margin-right: 75px;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.intervenants{
+    width: 250px;
+}
+.bronze{
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+}
+.argent{
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+}
+.or{
+    width: 250px;
+    height: 350px;
+    border: 2px solid black;
+}
+.sponsor{
+    display: flex;
+    text-align: center;
+}
+.col_form{
+    display: flex;
+    gap: 100px;
+}
+.col_info{
+    border: 2px solid black;
+}
+
+.profil{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+}
