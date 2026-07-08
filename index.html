@@ -10,15 +10,15 @@
 
 <body>
 
-    <nav >
+    <nav>
         <div class="d-flex">
             <div class="logo">Afri<span class="texte-primary">Connect</span> <br><span class="summit">Summit</span>
             </div>
-             <button class="burger-btn" aria-label="Ouvrir le menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+            <button class="burger-btn" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="nav_menu">
                 <ul class="ul_menu">
                     <li class="li_menu"><a href="index.html">Accueil</a></li>
@@ -39,21 +39,23 @@
         <section>
             <div class="le_temps">
                 <p><strong>PLUS QUE</strong></p>
-                <div class="fils_temps">
-                    02 : <br>
-                    Jours
-                </div>
-                <div class="fils_temps">
-                    10 : <br>
-                    Heures
-                </div>
-                <div class="fils_temps">
-                    30 : <br>
-                    Minutes
-                </div>
-                <div class="fils_temps">
-                    60 : <br>
-                    Secondes
+                <div class="div_temps">
+                    <div>
+                        <div class="fils_temps" id="jours">02</div>
+                        <div>Jours</div>
+                    </div>
+                    <div>
+                        <div class="fils_temps" id="heures">10</div>
+                        <div>Heures</div>
+                    </div>
+                    <div>
+                        <div class="fils_temps" id="minutes">30</div>
+                        <div>Minutes</div>
+                    </div>
+                    <div>
+                        <div class="fils_temps" id="secondes">60</div>
+                        <div>Secondes</div>
+                    </div>
                 </div>
             </div>
             <div class="bouton_cta">
@@ -167,8 +169,9 @@
 
             </div>
         </div>
+        <a href="#" id="bouton-retour-haut" title="Remonter en haut">↑</a>
         <hr>
-        <p>&copy; 2026 </span>Afri<span class="texte-primary">Connect</span>Summit. Tous droits réservés. </p>
+        <p>&copy; <span id="annee_dynamique"></span> </span>Afri<span class="texte-primary">Connect</span>Summit. Tous droits réservés. </p>
     </footer>
 
 

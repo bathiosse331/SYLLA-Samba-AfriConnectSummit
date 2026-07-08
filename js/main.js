@@ -99,3 +99,67 @@ btne.forEach((bt) =>{
     });
   });
 });
+
+
+// compte à rebours
+ // 1. Définir la date de fin (Exemple : 31 Décembre de l'année en cours) date cible qui sera soustrait par la date d'aujrdh
+        //new date 
+        const date_souhaitee = new Date("July 29, 2026 16:00:00").getTime();
+        //convertit en milliseconde le temps
+
+        // 2. Lancer la boucle de calcul toutes les 1 seconde (1000 ms)
+        const interval_calcul = setInterval(function() {
+
+            // Obtenir l'heure actuelle
+            const heure_actuelle = new Date().getTime();
+
+            // 3. Calculer l'écart entre maintenant et la cible
+            const distance = date_souhaitee - heure_actuelle;
+
+            // Calculs mathématiques pour convertir les millisecondes: 1000ms*60s*60mn*24h
+            //math.floor supp les virgules pour garder les nombres entiers et la division permet de convertir les millisecondes en unité visible(jr,hr,mn,s)
+            const jours = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const heures = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const secondes = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 4. Afficher le résultat dans les éléments HTML correspondants
+            document.getElementById("jours").innerText = jours < 10 ? "0" + jours : jours;
+            document.getElementById("heures").innerText = heures < 10 ? "0" + heures : heures;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("secondes").innerText = secondes < 10 ? "0" + secondes : secondes;
+
+            // Si le compte à rebours est fini, on arrête la boucle
+            if (distance < 0) {
+                clearInterval(interval_calcul);
+                document.querySelector(".div_temps").innerHTML = "<h2>L'événement a commencé !</h2>";
+            }
+
+        }, 1000);
+
+        // annee dynamique du footer
+        // Récupère l'année en cours et l'injecte dans la balise HTML et .getFY extrait unqm l'annee sous 4chiffres
+        document.getElementById("annee_dynamique").innerText = new Date().getFullYear();
+
+
+
+//  Sélection du bouton retour en haut
+const btnRetour = document.getElementById('bouton-retour-haut');
+
+// Afficher/Masquer le bouton selon la hauteur de défilement
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnRetour.style.display = 'block';
+    } else {
+        btnRetour.style.display = 'none';
+    }
+});
+
+// Remonter en haut de manière fluide au clic
+btnRetour.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
