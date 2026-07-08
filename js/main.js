@@ -163,3 +163,40 @@ btnRetour.addEventListener('click', (e) => {
         behavior: 'smooth'
     });
 });
+
+
+
+// On attend que la page (et le bouton du header) soit bien chargée
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('theme-toggle');
+
+    toggleButton.addEventListener('click', () => {
+        // 1. Récupérer le thème actuel sur l'élément HTML racine
+        const actuelTheme = document.documentElement.getAttribute('data-theme');
+        
+        // 2. Définir le nouveau thème opposé
+        const nouveauTheme = actuelTheme === 'dark' ? 'light' : 'dark';
+        
+        // 3. Appliquer le nouveau thème à la page
+        document.documentElement.setAttribute('data-theme', nouveauTheme);
+        
+        // 4. Sauvegarder le choix de l'utilisateur dans le localStorage
+        localStorage.setItem('theme', nouveauTheme);
+    });
+});
+
+
+// changement de fond a 80px défilement
+ // Récupérer l'élément de la navbar
+let navbar = document.getElementById("navbar");
+
+// Écouter l'événement de scroll sur la fenêtre
+window.addEventListener("scroll", () => {
+  // Si on a défilé de plus de 80 pixels
+  if (window.scrollY > 80) {
+    navbar.classList.add("scrolled");
+  } else {
+    // Si on est tout en haut
+    navbar.classList.remove("scrolled");
+  }
+});
