@@ -55,7 +55,8 @@
                                 <option value="guinee">Maroc</option>
                                 <option value="guinee">Tchad</option>
                             </select> <br>
-                            <label for="name">Message/Motivation :</label> <input type="text">
+                            <label for="name">Message/Motivation :</label> <input type="text"><br>
+                            <label for="name">Email :</label> <input type="email">
                         </fieldset>
                     </form>
                     <button type="submit">Soumettre</button>
@@ -73,39 +74,46 @@
         </section>
         <section>
             <h3>QUESTIONS LES PLUS FREQUENTES</h3>
-            <div>
-                <div>
-                    <h4>Comment s'inscrire</h4>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <input type="radio" class="faq-radio" id="faq-1" name="faq">
+                    <label for="faq-1" class="faq-title">Comment s'inscrire</label>
+                    <div class="faq-content">
+                        <p>Pour s'inscrire il suffit juste d'aller à l'accueil puis renseigner vos informations et
+                            ensuite
+                            clicher sur S'inscrire.</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Pour s'inscrire il suffit juste d'aller à l'accueil puis renseigner vos informations et ensuite
-                        clicher sur S'inscrire.</p>
+                <div class="faq-item">
+                    <input type="radio" class="faq-radio" id="faq-2" name="faq">
+                    <label for="faq-2" class="faq-title">Qui etes vous</label>
+                    <div class="faq-content">
+                        <p>Nous sommes une plateforme ou les amateurs de la tech se rencontrent et partage des
+                            opportunités
+                            autour d'un évenement.</p>
+                    </div>
                 </div>
-                <div>
-                    <h4>Qui etes-vous</h4>
+                <div class="faq-item">
+                    <input type="radio" class="faq-radio" id="faq-3" name="faq">
+                    <label for="faq-3" class="faq-title">Comment vous contacter</label>
+                    <div  class="faq-content">
+                        <p>A travers notre fax ou via notre mail.</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Nous sommes une plateforme ou les amateurs de la tech se rencontrent et partage des opportunités
-                        autour d'un évenement.</p>
+                <div class="faq-item">
+                    <input type="radio" id="faq-4" class="faq-radio" name="faq">
+                    <label for="faq-4" class="faq-title">Est-il possible de participer à l'événement</label>
+                    <div class="faq-content">
+                        <p>Oui il y a une possibilité, veuillez nous écrire reserver une place.</p>
+                    </div>
                 </div>
-                <div>
-                    <h4>Comment vous contacter</h4>
-                </div>
-                <div>
-                    <p>A travers notre fax ou via notre mail.</p>
-                </div>
-                <div>
-                    <h4>Il-est possible de participer à l'évenement</h4>
-                </div>
-                <div>
-                    <p>Oui il y a une possibilité, veuillez nous écrire reserver une place.</p>
-                </div>
-                <div>
-                    <h4>Pour ceux qui ont un projet est ce possible de les accopagner</h4>
-                </div>
-                <div>
-                    <p>Bien sur vous allez rencontrer des investisseurs qui pouront vous accompagner pour vos projets.
-                    </p>
+                <div class="faq-item">
+                    <input type="radio" id="faq-5" class="faq-radio" name="faq">
+                    <label for="faq-5" class="faq-title">Pour ceux qui ont un projet est ce possible de les accopagner</label>
+                    <div  class="faq-content">
+                        <p>Bien sur vous allez rencontrer des investisseurs qui pouront vous accompagner pour vos projets.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
