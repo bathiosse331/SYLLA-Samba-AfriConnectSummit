@@ -12,13 +12,20 @@
 
     <nav>
         <div class="d-flex">
-             <div class="logo">Afri<span class="texte-primary">Connect</span> <br><span class="summit">Summit</span></div>
-            <div>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="programme.html">Programme</a></li>
-                    <li><a href="intervenants.html">intervenants</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <div class="logo">Afri<span class="texte-primary">Connect</span> <br><span class="summit">Summit</span>
+            </div>
+            <button class="burger-btn" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav_menu">
+
+                <ul class="ul_menu">
+                    <li class="li_menu"><a href="index.html">Accueil</a></li>
+                    <li class="li_menu"><a href="programme.html">Programme</a></li>
+                    <li class="li_menu"><a href="intervenants.html">intervenants</a></li>
+                    <li class="li_menu"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -26,40 +33,48 @@
     <main>
         <h1>Nos différents intervenants lors du forum</h1>
         <section>
+            <div class="bouton_filtre">
+                <button class="filtre" data-cat="tous">TOUS</button>
+                <button class="filtre" data-cat="dev">Dev</button>
+                <button class="filtre" data-cat="ia">IA</button>
+                <button class="filtre" data-cat="data">DATA</button>
+                <button class="filtre" data-cat="business">BUSSINESS</button>
+                <button class="filtre" data-cat="design">DESIGN</button>
+            </div>
             <div class="parent_profil">
-                <div class="profil">
+                <div class="profil" data-target="ia">
                     <img src="images/ia.jpg" alt="" width="100%vh" height="150px">
                     <h4>Ousmane MANE_IA_Sénégal</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="dev">
                     <img src="images/dev.jpg" alt="" width="100%vh" height="150px">
                     <h4>Aliou SY_Développeur_Sénégal</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="business">
                     <img src="images/business.jpg" alt="" width="100%vh" height="150px">
                     <h4>Samba SYLLA_Bussiness_Sénégal</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="design">
                     <img src="images/design1.jpg" alt="" width="100%vh" height="150px">
                     <h4>Alamine Thiam_Design_Tchad</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="design">
                     <img src="images/design.jpg" alt="" width="100%vh" height="150px">
                     <h4>Oumou SALL_Design_Gambie</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="business">
                     <img src="images/business1.jpg" alt="" width="100%vh" height="150px">
                     <h4>Fatima TALL_Bussiness_Guinée</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="data">
                     <img src="images/data.jpg" alt="" width="100%vh" height="150px">
                     <h4>Aissata DIOP_Data_Mali</h4>
                 </div>
-                <div class="profil">
-                    <img src="images/dev1.jpg" alt=""width="100%vh" height="150px">
+                <div class="profil" data-target="dev">
+                    <img src="images/dev1.jpg" alt="" width="100%vh" height="150px">
                     <h4>Waly SECK_Développeur_Mauritanie</h4>
                 </div>
-                <div class="profil">
+                <div class="profil" data-target="ia">
                     <img src="images/ia1.jpg" alt="" width="100%vh" height="150px">
                     <h4>Modou SALL_IA_Cap Vert</h4>
                 </div>
@@ -70,22 +85,22 @@
     <footer>
         <div class="footer">
             <div>
-            <div>CONTACT</div>
-            <p>africonnectsummit@gmail.com</p>
-            <p>+33-123-45-67</p>
-        </div>
-        <div>
-            <div>LIEN RAPIDE</div>
-            <a href="#">Blog</a><br>
-            <a href="#">Nous Contacter</a>
-        </div>
-        <div>
-            <div>LIEN VERS RESEAU SOCIAUX</div>
-            <a href="#"><img src="images/whatsap.png" alt="" width="30px"></a>
-            <a href="#"><img src="images/messenger.jpg" alt="" width="30px"></a>
-            <a href="#"><img src="images/instagram.png" alt="" width="30px"></a>
-            
-        </div>
+                <div>CONTACT</div>
+                <p>africonnectsummit@gmail.com</p>
+                <p>+33-123-45-67</p>
+            </div>
+            <div>
+                <div>LIEN RAPIDE</div>
+                <a href="#">Blog</a><br>
+                <a href="#">Nous Contacter</a>
+            </div>
+            <div>
+                <div>LIEN VERS RESEAU SOCIAUX</div>
+                <a href="#"><img src="images/whatsap.png" alt="" width="30px"></a>
+                <a href="#"><img src="images/messenger.jpg" alt="" width="30px"></a>
+                <a href="#"><img src="images/instagram.png" alt="" width="30px"></a>
+
+            </div>
         </div>
         <hr>
         <p>&copy; 2026 </span>Afri<span class="texte-primary">Connect</span>Summit. Tous droits réservés. </p>

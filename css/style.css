@@ -313,6 +313,10 @@ p {
     border-bottom-right-radius: 20px;
 }
 
+.bouton_filtre{
+    text-align: center;
+}
+
 /* PARTIE CONTACT */
 
 .col_form {
