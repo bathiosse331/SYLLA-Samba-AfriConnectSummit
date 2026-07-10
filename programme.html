@@ -15,217 +15,206 @@
             <div class="logo">Afri<span class="texte-primary">Connect</span> <br><span class="summit">Summit</span>
             </div>
             <button class="burger-btn" aria-label="Ouvrir le menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="nav_menu">
                 <ul class="ul_menu">
                     <li class="li_menu"><a href="index.html">Accueil</a></li>
                     <li class="li_menu"><a href="programme.html">Programme</a></li>
                     <li class="li_menu"><a href="intervenants.html">intervenants</a></li>
                     <li class="li_menu"><a href="contact.html">Contact</a></li>
-                     <li li_menu>
+                    <li li_menu>
                         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">
-                        <span class="icon-sun"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
                                 </svg></span>
-                        <span class="icon-moon"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                            <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                     <path
                                         d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
                                 </svg></span>
-                    </button>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <main>
-        <h1>Veuillez trouver ici les plannings </h1>
+        <h1 class="fade-in">Veuillez trouver ici les plannings </h1>
         <section>
-            <div class="bouton_jour">
-                <button id="button">Jour 1</button>
-                <button>Jour 2</button>
-                <button>Jour 3</button>
+            <div class="bouton_jour div_conteneur fade-in">
+                <button id="button" class="tab_btn active" data-onglet="jour-1">Jour 1</button>
+                <button class="tab_btn" data-onglet="jour-2">Jour 2</button>
+                <button class="tab_btn" data-onglet="jour-3">Jour 3</button>
             </div>
-            <div>
-                <table>
-                    <!-- section en-tete -->
-                    <div>
+            <div class="div-conteneur">
+                <div  data-target="jour1" class="planning active fade-in">
+                    <table>
+                        <!-- section en-tete -->
                         <thead>
-                        <tr>
-                            <td>Heure</td>
-                            <td>Session</td>
-                            <td>Intervenant</td>
-                            <td>Salle</td>
-                        </tr>
-                    </thead>
-                    </div>
-                    <!-- // section corps -->
-                   <div>
-                     <tbody>
-                        <tr>
-                            <td>09: 00</td>
-                            <td>Web</td>
-                            <td>Samba</td>
-                            <td>Salle 01</td>
-                        </tr>
-                        <tr>
-                            <td>09: 30</td>
-                            <td>IA</td>
-                            <td>Abou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>10: 00</td>
-                            <td>Design</td>
-                            <td>Modou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>10: 30</td>
-                            <td>business</td>
-                            <td>Lamine</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>11: 00</td>
-                            <td>Data</td>
-                            <td>Haby</td>
-                            <td>Salle 02</td>
-                        </tr>
-                    </tbody>
-                   </div>
-                </table>
-            </div>
-            <div>
-                <table>
-                    <!-- section en-tete -->
-                   <div class="thead">
-                     <thead>
-                        <tr>
-                            <td>Heure</td>
-                            <td>Session</td>
-                            <td>Intervenant</td>
-                            <td>Salle</td>
-                        </tr>
-                    </thead>
-                   </div>
-                    <!-- // section corps -->
-                    <div>
-                        <tbody>
-                        <tr>
-                            <td>12: 00</td>
-                            <td>Web Mobile</td>
-                            <td>Samba</td>
-                            <td>Salle 01</td>
-                        </tr>
-                        <tr>
-                            <td>12: 30</td>
-                            <td>Cybersecurité</td>
-                            <td>Abou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>13: 00</td>
-                            <td>Data</td>
-                            <td>Modou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>13: 30</td>
-                            <td>Multimédia</td>
-                            <td>Lamine</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>14: 00</td>
-                            <td>Finance</td>
-                            <td>Haby</td>
-                            <td>Salle 02</td>
-                        </tr>
-                    </tbody>
-                    </div>
-                </table>
-            </div>
-            <div class="thead">
-                <table>
-                    <!-- section en-tete -->
-                    <div>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <!-- // section corps -->
+                            <tbody>
+                                <tr>
+                                    <td>09: 00</td>
+                                    <td>Web</td>
+                                    <td>Samba</td>
+                                    <td>Salle 01</td>
+                                </tr>
+                                <tr>
+                                    <td>09: 30</td>
+                                    <td>IA</td>
+                                    <td>Abou</td>
+                                    <td>Salle 02</td>
+                                </tr>
+                                <tr>
+                                    <td>10: 00</td>
+                                    <td>Design</td>
+                                    <td>Modou</td>
+                                    <td>Salle 02</td>
+                                </tr>
+                                <tr>
+                                    <td>10: 30</td>
+                                    <td>business</td>
+                                    <td>Lamine</td>
+                                    <td>Salle 02</td>
+                                </tr>
+                                <tr>
+                                    <td>11: 00</td>
+                                    <td>Data</td>
+                                    <td>Haby</td>
+                                    <td>Salle 02</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div id="tab_2" class="planning fade-in">
+                    <table>
+                        <!-- section en-tete -->
                         <thead>
-                        <tr>
-                            <td>Heure</td>
-                            <td>Session</td>
-                            <td>Intervenant</td>
-                            <td>Salle</td>
-                        </tr>
-                    </thead>
-                    </div>
-                    <!-- // section corps -->
-                    <div>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <!-- // section corps -->
                         <tbody>
-                        <tr>
-                            <td>14: 00</td>
-                            <td>Web</td>
-                            <td>Samba</td>
-                            <td>Salle 01</td>
-                        </tr>
-                        <tr>
-                            <td>14: 30</td>
-                            <td>IA</td>
-                            <td>Abou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>15: 00</td>
-                            <td>Design</td>
-                            <td>Modou</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>15: 30</td>
-                            <td>business</td>
-                            <td>Lamine</td>
-                            <td>Salle 02</td>
-                        </tr>
-                        <tr>
-                            <td>16: 00</td>
-                            <td>Data</td>
-                            <td>Haby</td>
-                            <td>Salle 02</td>
-                        </tr>
-                    </tbody>
-                    </div>
-                </table>
+                            <tr>
+                                <td>12: 00</td>
+                                <td>Web Mobile</td>
+                                <td>Samba</td>
+                                <td>Salle 01</td>
+                            </tr>
+                            <tr>
+                                <td>12: 30</td>
+                                <td>Cybersecurité</td>
+                                <td>Abou</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>13: 00</td>
+                                <td>Data</td>
+                                <td>Modou</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>13: 30</td>
+                                <td>Multimédia</td>
+                                <td>Lamine</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>14: 00</td>
+                                <td>Finance</td>
+                                <td>Haby</td>
+                                <td>Salle 02</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="tab_3" class="thead planning fade-in">
+                    <table>
+                        <!-- section en-tete -->
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                <th>Session</th>
+                                <th>Intervenant</th>
+                                <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <!-- // section corps -->
+                        <tbody>
+                            <tr>
+                                <td>14: 00</td>
+                                <td>Web</td>
+                                <td>Samba</td>
+                                <td>Salle 01</td>
+                            </tr>
+                            <tr>
+                                <td>14: 30</td>
+                                <td>IA</td>
+                                <td>Abou</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>15: 00</td>
+                                <td>Design</td>
+                                <td>Modou</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>15: 30</td>
+                                <td>business</td>
+                                <td>Lamine</td>
+                                <td>Salle 02</td>
+                            </tr>
+                            <tr>
+                                <td>16: 00</td>
+                                <td>Data</td>
+                                <td>Haby</td>
+                                <td>Salle 02</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
         <section>
-            <h2>Thématique de la Conférence</h2>
+            <h2 class="fade-in">Thématique de la Conférence</h2>
             <div class="thematique">
-                <div class="theme">
+                <div class="theme fade-in">
                     <img src="images/dev.jpg" alt="" width="100%vh">
                     <h3>Web</h3>
                     <p>Le développement web est un élément sollicité de nos jours qui consiste à concevoir des solutions
                         numériques.</p>
                 </div>
-                <div  class="theme">
+                <div class="theme fade-in">
                     <img src="images/ia.jpg" alt="" width="100%vh">
                     <h3>IA</h3>
                     <p>L'Intélligence Artificielle dit IA est un outil de réflexion rapide que l'humain se sert dans ses
                         taches répétitives.</p>
                 </div>
-                <div class="theme">
+                <div class="theme fade-in">
                     <img src="images/business.jpg" alt="" width="100%vh">
                     <h3>Business</h3>
                     <p>Le Business regroupe la stratégie, l'entrepreunariat et les opportinutés sur le marché de
                         croissance.</p>
                 </div>
-                <div class="theme">
+                <div class="theme fade-in">
                     <img src="images/data.jpg" alt="" width="100%vh">
                     <h3>Data</h3>
                     <p>La Data au coeur des entreprises est la génération de donnée que ce soit la vente d'un produit ou
@@ -257,7 +246,8 @@
         </div>
         <a href="#" id="bouton-retour-haut" title="Remonter en haut">↑</a>
         <hr>
-        <p>&copy; <span id="annee_dynamique"></span> </span>Afri<span class="texte-primary">Connect</span>Summit. Tous droits réservés. </p>
+        <p>&copy; <span id="annee_dynamique"></span> </span>Afri<span class="texte-primary">Connect</span>Summit. Tous
+            droits réservés. </p>
     </footer>
     <script src="js/main.js"></script>
 </body>

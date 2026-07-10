@@ -200,3 +200,86 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+
+
+// attend que la page soit complétement chargée avant de lancer le script
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    // 1. On filtre pour ne garder que les éléments qui entrent actuellement à l'écran
+    const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+
+    // 2. entry est l'element et index son indice
+    intersectingEntries.forEach((entry, index) => {
+      // appllique un delai de0.2s sur chaq apparition d'un element
+      entry.target.style.transitionDelay = `${index * 0.2}s`; 
+      entry.target.classList.add("visible");
+    });
+
+    // 3. On gère les éléments qui sortent de l'écran séparément
+    entries.forEach(entry => {
+// si l'elemnt n'est plus visible 
+      if (!entry.isIntersecting) {
+        entry.target.classList.remove("visible");
+        entry.target.style.transitionDelay = "0s";
+      }
+    });
+  }, {
+    threshold: 0.05
+  });
+// une boucle qui dit a l'observateur de prendre en compte l'element en train d'etre observer
+  elements.forEach(el => observer.observe(el));
+});
+
+
+
+// plannings qui s'affichent au click
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".tab_btn");
+  const panels = document.querySelectorAll(".planning");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // 1. Récupérer l'identifiant du tableau ciblé
+      const targetTabId = button.getAttribute("data-tab");
+
+      // 2. Retirer la classe 'active' de tous les boutons
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      // 3. Masquer temporairement tous les tableaux et réinitialiser leur opacité
+      panels.forEach(panel => {
+        panel.classList.remove("active");
+      });
+
+      // 4. Activer le bouton sur lequel on a cliqué
+      button.classList.add("active");
+
+      // 5. Afficher le tableau correspondant
+      const targetPanel = document.getElementById(targetTabId);
+      targetPanel.classList.add("active");
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".tab_btn");
+  const panels = document.querySelectorAll(".planning");
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      // 1. Nettoyer la classe active sur les boutons et les tableaux
+      buttons.forEach(btn => btn.classList.remove("active"));
+      panels.forEach(panel => panel.classList.remove("active"));
+
+      // 2. Activer le bouton cliqué
+      button.classList.add("active");
+
+      // 3. Activer le tableau ayant le même numéro de position (index)
+      if (panels[index]) {
+        panels[index].classList.add("active");
+      }
+    });
+  });
+});
