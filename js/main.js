@@ -124,10 +124,12 @@ btne.forEach((bt) =>{
             const secondes = Math.floor((distance % (1000 * 60)) / 1000);
 
             // 4. Afficher le résultat dans les éléments HTML correspondants
-            document.getElementById("jours").innerText = jours < 10 ? "0" + jours : jours;
+            if(document.getElementById("jours") !== null){
+              document.getElementById("jours").innerText = jours < 10 ? "0" + jours : jours;
             document.getElementById("heures").innerText = heures < 10 ? "0" + heures : heures;
             document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
             document.getElementById("secondes").innerText = secondes < 10 ? "0" + secondes : secondes;
+            }
 
             // Si le compte à rebours est fini, on arrête la boucle
             if (distance < 0) {
@@ -257,7 +259,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // 5. Afficher le tableau correspondant
       const targetPanel = document.getElementById(targetTabId);
-      targetPanel.classList.add("active");
+      if(targetPanel !== null){
+
+        targetPanel.classList.add("active");
+      }
     });
   });
 });
@@ -282,4 +287,129 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+// formulaire evenement
+
+
+// 1. Récupération de tous les éléments du HTML
+const formulaire = document.forms["formulaire"];
+const champNom = formulaire.querySelector(".nom");
+const erreurNom = document.getElementById("erreur_text");
+
+// Récupération du prénom (deuxième élément avec la classe .nom)
+const tousLesNoms = formulaire.querySelectorAll(".nom");
+const champPrenom = tousLesNoms[1]; 
+const erreurPrenom = champPrenom.nextElementSibling;
+
+const champTel = formulaire.querySelector(".telephone");
+const erreurTel = document.getElementById("errTel");
+
+const champMessage = document.getElementById("message");
+const erreurMessage = document.getElementById("erreurSms");
+
+const champEmail = formulaire.querySelector("input[type='email']");
+const erreurEmail = document.getElementById("erreurEmail");
+
+const boutonSubmit = document.getElementById("monForm");
+
+// Configuration rapide du style des spans d'erreur
+erreurMessage.style.color = "red";
+erreurMessage.style.fontSize = "10px";
+erreurEmail.style.color = "red";
+erreurEmail.style.fontSize = "10px";
+
+// Expression régulière (Regex) pour l'email
+const monExpressionRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+// 2. FONCTIONS DE VÉRIFICATION INDIVIDUELLES (Déclenchées par le 'blur')
+
+function verifierNom() {
+    if (champNom.value.trim() === "") {
+        erreurNom.textContent = "Ce champ est obligatoire";
+        erreurNom.style.display = "inline";
+        return false;
+    } else {
+        erreurNom.style.display = "none";
+        return true;
+    }
+}
+
+function verifierPrenom() {
+    if (champPrenom.value.trim() === "") {
+        erreurPrenom.textContent = "Ce champ est obligatoire";
+        erreurPrenom.style.display = "inline";
+        return false;
+    } else {
+        erreurPrenom.style.display = "none";
+        return true;
+    }
+}
+
+function verifierTel() {
+    // Si le champ est vide, on efface l'erreur, sinon on vérifie les 8 chiffres
+    if (champTel.value.length === 0) {
+        erreurTel.textContent = "";
+        return false;
+    } else if (champTel.value.length < 8) {
+        erreurTel.textContent = "Minimum 8 chiffres requis.";
+        return false;
+    } else {
+        erreurTel.textContent = "";
+        return true;
+    }
+}
+
+function verifierMessage() {
+    if (champMessage.value.length === 0) {
+        erreurMessage.textContent = "";
+        return false;
+    } else if (champMessage.value.length < 20) {
+        erreurMessage.textContent = "Minimum 20 caractères requis.";
+        return false;
+    } else {
+        erreurMessage.textContent = "";
+        return true;
+    }
+}
+
+function verifierEmail() {
+    if (champEmail.value === "") {
+        erreurEmail.textContent = "L'email est obligatoire.";
+        return false;
+    } else if (monExpressionRegex.test(champEmail.value) === false) {
+        erreurEmail.textContent = "Veuillez entrer une adresse email valide.";
+        return false;
+    } else {
+        erreurEmail.textContent = "";
+        return true;
+    }
+}
+
+
+// 3. ÉCOUTEURS D'ÉVÉNEMENTS 'BLUR' (Quand on quitte le champ)
+champNom.addEventListener("blur", verifierNom);
+champPrenom.addEventListener("blur", verifierPrenom);
+champTel.addEventListener("blur", verifierTel);
+champMessage.addEventListener("blur", verifierMessage);
+champEmail.addEventListener("blur", verifierEmail);
+
+
+// 4. VÉRIFICATION FINALE AU MOMENT DE LA SOUMISSION
+boutonSubmit.addEventListener("click", () => {
+    // On force la vérification de chaque champ pour afficher les erreurs oubliées
+    const nomOk = verifierNom();
+    const prenomOk = verifierPrenom();
+    const telOk = verifierTel();
+    const messageOk = verifierMessage();
+    const emailOk = verifierEmail();
+
+    // Si TOUS les champs retournent true, le formulaire est envoyé
+    if (nomOk && prenomOk && telOk && messageOk && emailOk) {
+        alert(" Formulaire valide. Envoi en cours...");
+        formulaire.submit();
+    } else {
+        alert("Veuillez corriger les erreurs avant d'envoyer.");
+    }
 });

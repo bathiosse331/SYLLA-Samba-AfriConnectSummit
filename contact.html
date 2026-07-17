@@ -11,7 +11,7 @@
 <body>
 
     <nav>
-        <div class="d-flex navbar_custom">
+        <div class="d-flex navbar_custom"  id="navbar">
             <div class="logo">Afri<span class="texte-primary">Connect</span> <br><span class="summit">Summit</span>
             </div>
             <button class="burger-btn" aria-label="Ouvrir le menu">
@@ -48,21 +48,34 @@
         <section>
             <div class="col_form">
                 <div class="div_form fade-in">
-                    <form action="">
+                    <form action="" name="formulaire">
                         <fieldset>
                             <legend>S'Inscrire</legend>
-                            <label for="name">Nom :</label> <input type="text"> <br>
-                            <label for="name">Prénom :</label> <input type="text"><br>
-                            <label for="name">Numéro :</label> <input type="text"><br>
-                            <label for="name">Type de Participation :</label>
-                            <select name="" id="">
+                            <div id="conteneur">
+                                <label for="name">Nom :</label> <input type="text" class="nom"> 
+                                <span id="erreur_text" style="color: red; font-size: 10px; display: none;">Ce champs est obligatoire</span>
+                            </div>
+                            <div id="conteneur">
+                                <label for="name">Prénom :</label> <input type="text" class="nom">
+                                <span id="erreur_text" style="color: red; font-size: 10px; display: none;">Ce champs est obligatoire</span>
+                            </div>
+                            <div id="divTelephone">
+                                <label for="name">Numéro :</label> <input type="text" class="telephone">
+                            <span id="errTel" style="color: red; font-size: 10px; display: inline;"></span>
+                            </div>
+                            <div>
+                                <label for="name">Type de Participation :</label>
+                                 <select name="" id="">
                                 <option value="dev">Développeur/se</option>
                                 <option value="invest">Investisseur/se</option>
                                 <option value="entrep">Entrepreneur/se</option>
                                 <option value="visit">Visiteur/se</option>
-                            </select> <br>
+                            </select>
+                            <span id="erreurProfil"></span>
+                            </div>
 
-                            <label for="name">Pays africain:</label>
+                            <div id="selectPays">
+                                <label for="name">Pays africain:</label>
                             <select name="" id="">
                                 <option value="senegal">Sénégal</option>
                                 <option value="cote d'ivoire">Cote d'Ivoire</option>
@@ -73,12 +86,20 @@
                                 <option value="guinee">Mauritanie</option>
                                 <option value="guinee">Maroc</option>
                                 <option value="guinee">Tchad</option>
-                            </select> <br>
-                            <label for="name">Message/Motivation :</label> <input type="text"><br>
-                            <label for="name">Email :</label> <input type="email">
+                            </select>
+                            <span id="erreurPays"></span>
+                            </div>
+                            <div id="div_message">
+                                <label for="name">Message/Motivation :</label> <textarea name="" id="message"></textarea>
+                                <span id="erreurSms"></span>
+                            </div>
+                            <div id="Email">
+                                <label for="name">Email :</label> <input type="email">
+                                <span id="erreurEmail"></span>
+                            </div>
                         </fieldset>
                     </form>
-                    <button type="submit" class="fade-in">Soumettre</button>
+                    <button type="submit" class="fade-in" id="monForm">Soumettre</button>
                 </div>
                 <div class="div_form fade-in">
                     <p>Ce qu'il fait connaitre de nous</p>
